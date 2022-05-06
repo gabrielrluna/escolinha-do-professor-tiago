@@ -13,3 +13,12 @@ CREATE TABLE cursos(
 )
 ```
 
+<!-- Criação da tabela "professores" -->
+```sql
+CREATE TABLE professores(
+    id SMALLINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nomeProfessor VARCHAR(30) NOT NULL
+    materia ENUM("design","desenvolvimento","infra") NOT NULL
+    cursos_id SMALLINT NULL
+)
+```
