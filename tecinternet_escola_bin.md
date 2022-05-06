@@ -7,8 +7,8 @@ CREATE DATABASE tecinternet_escola_bin CHARACTER SET utf8mb4
 ```sql
 CREATE TABLE cursos(
     id SMALLINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    titulo VARCHAR(30) NOT NULL
-    cHoraria SMALLINT NOT NULL
+    titulo VARCHAR(30) NOT NULL,
+    cHoraria SMALLINT NOT NULL,
     professor_id SMALLINT NULL
 )
 ```
@@ -17,8 +17,8 @@ CREATE TABLE cursos(
 ```sql
 CREATE TABLE professores(
     id SMALLINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    nomeProfessor VARCHAR(30) NOT NULL
-    materia ENUM("design","desenvolvimento","infra") NOT NULL
+    nomeProfessor VARCHAR(30) NOT NULL,
+    materia ENUM("design","desenvolvimento","infra") NOT NULL,
     cursos_id SMALLINT NULL
 )
 ```
@@ -27,10 +27,10 @@ CREATE TABLE professores(
 ```sql
 CREATE TABLE alunos(
     id SMALLINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    nomeAluno VARCHAR(50) NOT NULL
-    nascimento DATE NOT NULL
-    nota1 DECIMAL(4,2) NOT NULL
-    nota2 DECIMAL(4,2) NOT NULL
+    nomeAluno VARCHAR(50) NOT NULL,
+    nascimento DATE NOT NULL,
+    nota1 DECIMAL(4,2) NOT NULL,
+    nota2 DECIMAL(4,2) NOT NULL,
     cursos_id SMALLINT NULL
 )
 ```
