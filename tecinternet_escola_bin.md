@@ -22,3 +22,15 @@ CREATE TABLE professores(
     cursos_id SMALLINT NULL
 )
 ```
+
+<!-- Criação da tabela "alunos" -->
+```sql
+CREATE TABLE alunos(
+    id SMALLINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nomeAluno VARCHAR(50) NOT NULL
+    nascimento DATE NOT NULL
+    nota1 DECIMAL(4,2) NOT NULL
+    nota2 DECIMAL(4,2) NOT NULL
+    cursos_id SMALLINT NULL
+)
+```
