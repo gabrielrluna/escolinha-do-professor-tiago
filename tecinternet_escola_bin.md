@@ -19,7 +19,7 @@ CREATE TABLE professores(
     id SMALLINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nomeProfessor VARCHAR(30) NOT NULL,
     materia ENUM("design","desenvolvimento","infra") NOT NULL,
-    cursos_id SMALLINT NULL
+    cursos_id SMALLINT NOT NULL
 )
 ```
 
@@ -31,6 +31,27 @@ CREATE TABLE alunos(
     nascimento DATE NOT NULL,
     nota1 DECIMAL(4,2) NOT NULL,
     nota2 DECIMAL(4,2) NOT NULL,
-    cursos_id SMALLINT NULL
+    cursos_id SMALLINT NOT NULL
 )
+```
+
+<!-- Criando relações entre as tabelas -->
+```sql
+-- Relação professor_id-cursos
+ALTER TABLE cursos
+    ADD CONSTRAINT fk_cursos_professores
+
+    FOREIGN KEY (professor_id) REFERENCES professores(id)
+
+-- Relação cursos_id-professores
+ALTER TABLE professores
+    ADD CONSTRAINT fk_professores_cursos
+
+    FOREIGN KEY (cursos_id) REFERENCES cursos(id)
+
+-- Relação cursos_id-alunos
+ALTER TABLE alunos
+    ADD CONSTRAINT fk_alunos_cursos
+
+    FOREIGN KEY (cursos_id) REFERENCES cursos(id)
 ```
