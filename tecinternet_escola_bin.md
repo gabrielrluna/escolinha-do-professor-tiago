@@ -75,3 +75,23 @@ NULL),
 "100h",
 NULL)
 ```
+
+### Cadastrando professores
+```sql
+INSERT INTO professores (nomeProfessor, materia, cursos_id) VALUES
+("Jon Oliva",
+"Infra",
+25),
+("Lemmy Kilmister",
+"Design",
+24),
+("Neil Peart",
+"Design",
+23),
+("Ozzy Osbourne",
+"Desenvolvimento",
+22),
+("David Gilmour",
+"Desenvolvimento",
+21)
+```
