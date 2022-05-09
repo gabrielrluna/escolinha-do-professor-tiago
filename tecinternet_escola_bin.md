@@ -1,9 +1,9 @@
-<!-- Criação do Banco de Dados -->
+### Criação do Banco de Dados
 ```sql
 CREATE DATABASE tecinternet_escola_bin CHARACTER SET utf8mb4
 ```
 
-<!-- Criação da tabela "cursos" -->
+### Criação da tabela "cursos"
 ```sql
 CREATE TABLE cursos(
     id SMALLINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -13,7 +13,8 @@ CREATE TABLE cursos(
 )
 ```
 
-<!-- Criação da tabela "professores" -->
+### Criação da tabela "professores"
+
 ```sql
 CREATE TABLE professores(
     id SMALLINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -23,7 +24,7 @@ CREATE TABLE professores(
 )
 ```
 
-<!-- Criação da tabela "alunos" -->
+### Criação da tabela "alunos"
 ```sql
 CREATE TABLE alunos(
     id SMALLINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -35,7 +36,8 @@ CREATE TABLE alunos(
 )
 ```
 
-<!-- Criando relações entre as tabelas -->
+### Criando relações entre as tabelas
+
 ```sql
 -- Relação professor_id-cursos
 ALTER TABLE cursos
@@ -104,4 +106,60 @@ UPDATE cursos SET professor_id = 4 WHERE id=22;
 UPDATE cursos SET professor_id = 3 WHERE id=23;
 UPDATE cursos SET professor_id = 2 WHERE id=24;
 UPDATE cursos SET professor_id = 1 WHERE id=25;
+```
+
+### Cadastrando alunos na escola
+
+```sql
+INSERT INTO alunos (nomeAluno, nascimento, nota1, nota2, cursos_id) VALUES
+("Bertoldo Bredtch",
+"2000-05-23",
+10.00,
+8.56,
+21),
+("Dona Cacilda",
+"1996-11-28",
+9.65,
+5.65,
+22),
+("Aldemar Vigário",
+"1950-09-11",
+7.45,
+2.15,
+23),
+("Seu Boneco",
+"1990-06-20",
+4.98,
+9.36,
+23),
+("Dona Catifunda",
+"1995-07-12",
+6.78,
+8.45,
+23),
+("Rolando Lero",
+"1976-01-15",
+1.45,
+0.32,
+23),
+("Paulo Cintura",
+"1986-10-29",
+4.82,
+9.76,
+24),
+("Dona Flor",
+"2001-03-12",
+10.00,
+10.00,
+24),
+("Armando Volta",
+"1998-07-01",
+5.03,
+9.45,
+25),
+("Galeão Cumbica",
+"1993-12-12",
+8.23,
+2.94,
+21)
 ```
