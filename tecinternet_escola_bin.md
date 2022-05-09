@@ -55,3 +55,23 @@ ALTER TABLE alunos
 
     FOREIGN KEY (cursos_id) REFERENCES cursos(id)
 ```
+
+### Cadastrando cursos
+```sql
+INSERT INTO cursos (titulo, cHoraria, professor_id) VALUES
+("Front-End",
+"40h",
+NULL),
+("Back-end",
+"80h",
+NULL),
+("UX/UI Design",
+"30h",
+NULL),
+("Figma",
+"10h",
+NULL),
+("Redes de Computadores",
+"100h",
+NULL)
+```
