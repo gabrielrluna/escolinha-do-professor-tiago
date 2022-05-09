@@ -62,19 +62,19 @@ ALTER TABLE alunos
 ```sql
 INSERT INTO cursos (titulo, cHoraria, professor_id) VALUES
 ("Front-End",
-"40h",
+40,
 NULL),
 ("Back-end",
-"80h",
+80,
 NULL),
 ("UX/UI Design",
-"30h",
+30,
 NULL),
 ("Figma",
-"10h",
+10,
 NULL),
 ("Redes de Computadores",
-"100h",
+100,
 NULL)
 ```
 
