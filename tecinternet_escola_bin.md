@@ -95,3 +95,13 @@ INSERT INTO professores (nomeProfessor, materia, cursos_id) VALUES
 "Desenvolvimento",
 21)
 ```
+
+
+### Atualizando dados da tabela
+```sql
+UPDATE cursos SET professor_id = 5 WHERE id=21;
+UPDATE cursos SET professor_id = 4 WHERE id=22;
+UPDATE cursos SET professor_id = 3 WHERE id=23;
+UPDATE cursos SET professor_id = 2 WHERE id=24;
+UPDATE cursos SET professor_id = 1 WHERE id=25;
+```
