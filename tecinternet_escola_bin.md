@@ -187,3 +187,8 @@ SELECT titulo, cHoraria, ROUND(cHoraria*0.25)AS "Limite de Faltas" FROM cursos O
 ```sql
 SELECT nomeProfessor, materia FROM professores WHERE materia = "desenvolvimento";
 ```
+
+### Contando os professores de desenvolvimento
+```sql
+SELECT COUNT(materia) AS "Quantidade de professores" FROM professores WHERE materia = "desenvolvimento"
+```
