@@ -228,3 +228,16 @@ COUNT(alunos.cursos_id) AS "Alunos"
 FROM alunos LEFT JOIN cursos ON alunos.cursos_id = cursos.id
 GROUP BY Matéria
 ```
+
+###  Fazendo uma consulta que mostre o nome dos alunos, suas notas, médias, e o título dos cursos que fazem. Devem ser considerados somente os alunos de Front-End e Back-End,classificados pelo nome do aluno.
+
+
+```sql
+SELECT nomeAluno, cursos.titulo AS "Curso", nota1, nota2, ROUND(AVG(nota1+nota2)/2, 2) AS "Média Final"
+FROM alunos LEFT JOIN cursos ON alunos.cursos_id = cursos.id
+WHERE cursos.id = 21 or cursos.id = 22
+GROUP BY nomeAluno 
+ORDER BY nomeAluno
+```
+
+
