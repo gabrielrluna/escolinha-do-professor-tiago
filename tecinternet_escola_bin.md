@@ -248,3 +248,10 @@ UPDATE cursos SET titulo = "Adobe XD" WHERE id=24
 UPDATE cursos SET cHoraria = 15 WHERE id = 24;
 ```
 
+
+### Excluindo um aluno do curso de Redes de Computadores e um aluno do curso de UX/UI.
+
+```sql
+DELETE FROM alunos WHERE id = 12 OR id=8
+```
+
