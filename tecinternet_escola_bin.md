@@ -255,3 +255,11 @@ UPDATE cursos SET cHoraria = 15 WHERE id = 24;
 DELETE FROM alunos WHERE id = 12 OR id=8
 ```
 
+### Lista de alunos atualizada e o título dos cursos que fazem, classificados pelo nome do aluno.
+
+```sql
+SELECT alunos.nomeAluno, cursos.titulo
+FROM alunos INNER JOIN cursos
+ON alunos.cursos_id = cursos.id;
+ORDER BY nomeAluno
+```
