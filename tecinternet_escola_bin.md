@@ -263,3 +263,33 @@ FROM alunos INNER JOIN cursos
 ON alunos.cursos_id = cursos.id;
 ORDER BY nomeAluno
 ```
+
+
+## HORA DO DESAFIO, GALERA!
+
+### Criar uma consulta que calcule a idade do aluno
+
+```SQL
+SELECT nomeAluno, nascimento, (2022 - (YEAR(nascimento)))
+AS "Idade"
+FROM alunos
+```
+
+### Criar uma consulta que calcule a média das notas de cada aluno e mostre somente os alunos que tiveram a média maior ou igual a 7.
+
+```SQL
+SELECT nomeAluno, ROUND(AVG(nota1+nota2)/2, 2) AS "Média" FROM alunos WHERE ((nota1+nota2)/2) <= 7 GROUP BY nomeAluno;
+```
+
+### Criar uma consulta que calcule a média das notas de cada aluno e mostre somente os alunos que tiveram a média menor que 7.
+
+```SQL
+SELECT nomeAluno, ROUND(AVG(nota1+nota2)/2, 2) AS "Média" FROM alunos WHERE ((nota1+nota2)/2) <= 7 GROUP BY nomeAluno;
+```
+
+### Criar uma consulta que mostre a quantidade de alunos com média maior ou igual a 7.
+```SQL
+SELECT COUNT((nota1+nota2)/2) AS "Quantidade de Alunos"
+FROM alunos 
+WHERE((nota1+nota2)/2) >= 7;
+```
