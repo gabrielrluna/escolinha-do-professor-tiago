@@ -170,3 +170,9 @@ INSERT INTO alunos (nomeAluno, nascimento, nota1, nota2, cursos_id) VALUES
 ```SQL
 SELECT nomeAluno, nascimento FROM alunos WHERE nascimento < "1999-01-01";
 ```
+
+### Consultando a média das notas dos alunos
+
+```SQL
+SELECT nomeAluno, ROUND(AVG(nota1+nota2)/2, 2) AS "Média Final" FROM alunos GROUP BY nomeAluno;
+```
