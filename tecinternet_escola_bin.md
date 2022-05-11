@@ -176,3 +176,8 @@ SELECT nomeAluno, nascimento FROM alunos WHERE nascimento < "1999-01-01";
 ```SQL
 SELECT nomeAluno, ROUND(AVG(nota1+nota2)/2, 2) AS "Média Final" FROM alunos GROUP BY nomeAluno;
 ```
+
+### Criando limite de carga horária dos cursos
+```SQL
+SELECT titulo, cHoraria, ROUND(cHoraria*0.25)AS "Limite de Faltas" FROM cursos ORDER BY titulo
+```
