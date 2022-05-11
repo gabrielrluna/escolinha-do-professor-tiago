@@ -192,3 +192,12 @@ SELECT nomeProfessor, materia FROM professores WHERE materia = "desenvolvimento"
 ```sql
 SELECT COUNT(materia) AS "Quantidade de professores" FROM professores WHERE materia = "desenvolvimento"
 ```
+
+
+### Consultando nome dos alunos, o título e a carga horária dos cursos
+
+```sql
+SELECT alunos.nomeAluno, cursos.titulo, cursos.cHoraria
+FROM alunos INNER JOIN cursos
+ON alunos.cursos_id = cursos.id;
+```
