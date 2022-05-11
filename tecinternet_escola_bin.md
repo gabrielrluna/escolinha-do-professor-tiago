@@ -163,3 +163,10 @@ INSERT INTO alunos (nomeAluno, nascimento, nota1, nota2, cursos_id) VALUES
 2.94,
 21)
 ```
+
+
+### Consultando os alunos que nasceram antes de 1995
+
+```SQL
+SELECT nomeAluno, nascimento FROM alunos WHERE nascimento < "1999-01-01";
+```
