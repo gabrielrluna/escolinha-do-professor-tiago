@@ -181,3 +181,9 @@ SELECT nomeAluno, ROUND(AVG(nota1+nota2)/2, 2) AS "Média Final" FROM alunos GRO
 ```SQL
 SELECT titulo, cHoraria, ROUND(cHoraria*0.25)AS "Limite de Faltas" FROM cursos ORDER BY titulo
 ```
+
+### Consultando professores de desenvolvimento
+
+```sql
+SELECT nomeProfessor, materia FROM professores WHERE materia = "desenvolvimento";
+```
