@@ -201,3 +201,10 @@ SELECT alunos.nomeAluno, cursos.titulo, cursos.cHoraria
 FROM alunos INNER JOIN cursos
 ON alunos.cursos_id = cursos.id;
 ```
+
+# Consultando professores e seus respectivos cursos
+
+```sql
+SELECT professores.nomeProfessor, cursos.titulo FROM professores INNER JOIN cursos
+ON professores.cursos_id = cursos.id;
+```
